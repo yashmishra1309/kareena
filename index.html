@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lng="en">
+<head>
+<meta charset="utf-8">
+<title>open my letter</
+  title>
+   <style>
+     body{
+       margin:0,
+         height:100vh,
+         display:flex,
+     justify-content:center,
+     align-items:center,
+     background: linear gradient[135deg,#ffd6e7 ,#ffeaf3],
+     overflow: hidden,
+     font-family:Arial , sns-serif,
+     }
+     /* floating hearts */
+     .heart{
+       position :absolute,
+       animation:float 6s linear infinite,
+       opacity:0.8,
+       }
+       @keyframe float{
+         0%{
+         transform:translatey[100vh],
+         opacity:0,
+         }
+         50%{
+           opacity:1,
+             }
+         100%{
+           transform:translatey[-10vh],
+         opacity:0,
+         }
+     }
+     /* cursor heart */
+     .cursor-heart{
+       position:absolute,
+         pointer-events:none,
+       color:#ff4d88,
+       font-size:18px,
+       animation:fade 1s forwards,
+     }
+     @keyframe fade{
+       0%{opacity:0,
+         transform:scale[1],}
+     }
+     .envelope{
+       width:220px,
+         height:150px,
+         background:#ff7aa2,
+         position:relative,
+     border-radius:8px,
+     cursor:pointer,
+     }
+     .flap{
+       position:absolute,
+         width:0,
+       height:0,
+       border-left:110px solidtransparent,
+       border-right:110px solidtransparent,
+       border-bottom:75px solid #ff4daa,
+       top:-75px,
+       transform-origin:bottom,
+       transition:0.6s,
+     }
+     .letter{
+       width:200px,
+         height:12opx,
+         background:white,
+       position-absolute:
+       top:-15px
+       left:10px,
+       border-radius:6px,
+       padding:15px,
+       box-sizing:border-box,
+       transform:translatey[0],
+       transition:0.8s,
+       opacity:0,
+     }
+     .open .flap{
+       transform:rotatex[180deg],
+       }     
+       .open .letter{
+         transform:translatey[-120px],
+         opacity:1,
+         }
+         .message{
+           margin-top:20px,
+             font-size:18px
+         }
+         </style>
+</head>
+<body>
+  <div class="container">
+    <div clss="envelope"
+      oneclick="openletter[]"
+      id="env">
+      <div class="letter">
+        <h3>hello6 </h3>
+        <p>
+          This littile letter is just for u my love kareena.<br>
+          hopes this makes u smile
+        </p>
+      </div>
+    </div>
+    <div class="message">click the envelope </div>
+  </div>
+  <script>
+    /* open envelope */
+    function openletter[]{
+    document.getelementbyid["env"].classlist.toggle["open"],
+      }
+    /* floating hearts */
+    function floatinghearts[]{
+      const
+        heart=document.createelement["div"],
+        heart.classname="heart",
+        heart.innerhtml="69",
+        heart.style.left=math.random[]*100+"vw",
+        heart.style.fontsize=[15+math.random[]*20]+"px"
+      document.body.appendchild[heart],
+        settimmeout[[]=>{
+        heart.remove[],
+          } ,6000],
+          }
+      setinterval[floatingheart ,500],
+        /* cursor heart */
+        document.addeventlistner["mousemove" ,function]{
+        const
+          heart=documentcreateelement["div"],
+          heart.classname="cursor-heart",
+          heart.innerHTML="69",
+          heart.style.left="e.pagex+"px",
+          heart.style.left="e.pagey+"px",
+          document.body.appendchild[heart],
+          settimeout[[]=><
+          heart.remove[],
+          } , 1000],
+      }],
+        </script>
+</body>
+</html>
+        
+    
+  </script>
+  
+    
+     
